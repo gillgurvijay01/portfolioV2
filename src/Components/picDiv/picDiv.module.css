@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'MyFont';
+    src: local('./fonts/customFont.ttf'), url(./../../fonts/customFont.ttf) format('ttf')}
+.picdiv{
+    background-color: black;
+    color: #00ff00;
+    height: max-content;
+    font-family: 'MyFont';
+    display: flex;
+    flex-wrap: wrap;        	/*options : flex-start | flex-end | center | baseline | stretch*/
+    justify-content: center;	/*options : start |  center | space-between | space-around | space-evenly*/
+    align-items: center;  
+    height: 100vh; 
+    width: 100vw;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.centered_div{
+    border:0.1rem dotted #00ff00;
+    
+    display: flex;
+    width: max-content !important;
+    flex-direction: row-reverse;
+    /* border: 0.2rem solid #00ff00; */
+    /* margin: 2rem; */
+    width: 75vw;
+}
+/* .typewriter{
+width: ;
+text-align: center;
+} */
+.profilepic{
+    height:35rem;
+    width: auto;
+}
+.topContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
