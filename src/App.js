@@ -5,6 +5,7 @@ import PicDiv from './Components/picDiv/PicDiv';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
+import About from './Components/About/About';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <React.Fragment>
       <Header />
       <PicDiv />  
+      <About/>
     </React.Fragment>
     );
 }

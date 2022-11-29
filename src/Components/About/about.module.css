@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'XeroFont';
+    src: url('./../../fonts/savedByZero.otf')}
+  
+.aboutDiv{ 
+ background-color:  #00ff00;
+ color: black;
+ min-height: 100vh;
+ padding-top: 100px;
+ font-family: 'MyFont';
+ }
+
+.heading{
+    font-size: 3rem;
+    font-weight:1000;
+    font-family: 'MyFont';
+ }
+ .paragraphAbout{
+    margin: auto;
+    width: 80vw;
+    font-family: 'XeroFont';
+    font-size: 1.5rem;
+ }
+
+ .linksHeading{
+    font-size: 3rem;
+    margin-top: 2.5rem;
+    width: 70vw;
+    margin: auto;
+}
+
+.links{
+    font-size: 2rem;
+    margin-top: 1rem;
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}

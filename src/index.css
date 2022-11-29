@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'MyFont';
-  src: local('./fonts/customFont.ttf'), url(./fonts/customFont.ttf) format('ttf')
-}
+
 
 body {
   margin: 0 !important;
