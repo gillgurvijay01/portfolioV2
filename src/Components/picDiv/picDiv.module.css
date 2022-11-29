@@ -1,40 +1,69 @@
-@font-face {
-    font-family: 'MyFont';
-    src: local('./fonts/customFont.ttf'), url(./../../fonts/customFont.ttf) format('ttf')}
-.picdiv{
+.picdiv {
     background-color: black;
     color: #00ff00;
     height: max-content;
     font-family: 'MyFont';
     display: flex;
-    flex-wrap: wrap;        	/*options : flex-start | flex-end | center | baseline | stretch*/
-    justify-content: center;	/*options : start |  center | space-between | space-around | space-evenly*/
-    align-items: center;  
-    height: 100vh; 
+    flex-wrap: wrap;
+    /*options : flex-start | flex-end | center | baseline | stretch*/
+    justify-content: center;
+    /*options : start |  center | space-between | space-around | space-evenly*/
+    align-items: center;
+    height: 100vh;
     width: 100vw;
     margin-right: 0px !important;
     margin-left: 0px !important;
 }
-.centered_div{
-    border:0.1rem dotted #00ff00;
-    
+
+.centered_div {
+    /* border:0.1rem dotted #00ff00; */
+
     display: flex;
-    width: max-content !important;
+    justify-content: space-between;
     flex-direction: row-reverse;
+    width:100vw;
     /* border: 0.2rem solid #00ff00; */
     /* margin: 2rem; */
-    width: 75vw;
+    /* width: 90vw; */
 }
+
 /* .typewriter{
 width: ;
 text-align: center;
 } */
-.profilepic{
-    height:35rem;
+.profilepic {
+    height: 30rem;
     width: auto;
+    padding: 10px;
 }
-.topContent{
+@media only  screen and (max-width:768px) {
+    .profilepic{
+        width: 450px;
+        padding: 0;
+        margin: 0;
+    }
+    
+}
+.topContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 5px;
+
+}
+/* 
+@media only screen and (max-width : 768px) {
+
+    .topContent {
+        margin-top: 2rem;
+        border-top: 10px solid #00ff00;
+        border-right: 10px solid #00ff00;
+        border-bottom: 10px solid #00ff00;
+
+    }
+} */
+
+.imageDiv {
+    padding: 3rem;
+    margin-left: 10px;
 }

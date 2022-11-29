@@ -8,15 +8,16 @@ const PicDiv = () => {
     // var sentence = ['git pull origin gurvijay']
 
     return (
-        <div className={`${style.picdiv} p-sm-4 p-xl-0`}>
-            <div className={`${style.centered_div} row p-sm-2 p-md-5 `}>
-                <div className="image col-sm-12 col-lg-6">
+        <div className={`${style.picdiv} p-sm-4 p-0`}>
+            <div className={`${style.centered_div} row `}>
+                <div className={`${style.imageDiv} col-sm-12 col-md-5`}>
                     <Fade right>
-                    <img src={myPic} alt="" className={style.profilepic} />
+                    <img src={myPic} alt="" className={`${style.profilepic} mr-xs-5 mr-md-0`} />
                     </Fade>
-                </div>        <Fade left>
+                </div>        
 
-                    <div className={`${style.topContent} align-items-sm-center col-sm-12 col-lg-6`}>
+                    <div className={`${style.topContent} align-items-sm-center col-sm-12 col-md-5 mt-sm-5 mt-lg-0`}>
+                    <Fade left>
                         <h1>Hi my name is Gurvijay</h1>
                         {/* <div className={`${style.typewriter}`}>
                         <h5 >
@@ -25,8 +26,9 @@ const PicDiv = () => {
                         </h5>
 
                     </div> */}
-                    </div>
                 </Fade>
+                    </div>
+                
             </div>
         </div>
     )

@@ -1,0 +1,14 @@
+.navbar{
+    /* background-color: black; */
+    }
+
+.link{
+    color: #00ff00 !important;
+
+}
+.navLinkDiv{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ width: 100%;
+}
