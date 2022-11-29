@@ -48,6 +48,7 @@
 }
 
 .navbar{
+  z-index: 10;
   background-color:black;
   height: 5rem;
   border-bottom:0.2rem solid #00ff00 ;

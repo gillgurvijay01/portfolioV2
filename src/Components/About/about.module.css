@@ -37,3 +37,20 @@
     display: flex;
     flex-direction: column;
 }
+@media only screen and (max-width : 576px) {
+    .heading{
+        font-size: 2rem;
+    }
+    .paragraphAbout{
+        width: 98vw;
+        margin: 5px ;
+        text-justify:distribute;
+        font-size: 1rem;
+     }   
+     .linksHeading{
+        font-size: 1.8rem;
+     }
+     .links{
+        font-size: 1rem;
+     }
+}
