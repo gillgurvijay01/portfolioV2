@@ -22,18 +22,18 @@
     }
     
 }
-@media only screen  and (max-width : 575px){
+@media only screen  and (max-width : 990px){
     .headingWork{
-        font-size: 1rem; 
+        font-size: 2rem !important; 
        }
        .timeWork{
-           font-size: 0.8rem;
+           font-size: 0.8rem !important;
        }
        .posWork{
-           font-size: .5rem;
+           font-size: 1rem !important;
        }
-       .detailsWork{
-           font-size: 1rem;
+       .points{
+           font-size: 1.2rem !important;
            margin-top: 1rem;
        }
 }
