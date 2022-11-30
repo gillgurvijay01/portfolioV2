@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './App.css';
 import PicDiv from './Components/picDiv/PicDiv';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
 import About from './Components/About/About';
+import Work from './Components/Work/Work';
 
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <Header />
       <PicDiv />  
       <About/>
+      <Work/>
     </React.Fragment>
     );
 }
