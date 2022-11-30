@@ -44,7 +44,7 @@ const Work = () => {
           
               <ul className={`${css.points}`}>
                 <li>Trained in MERN Full stack technology</li>
-                <li>Learned technologies like ReactJs , MongoDb database , NodeJS, and Express Js</li>
+                <li>Learned technologies like ReactJs, MongoDb database, NodeJS, and Express Js</li>
                 
               </ul>
               </Fade>
