@@ -14,9 +14,20 @@
   pointer-events: none;
 }
 
-.nav-link{
-  color: #00ff00;
+.navbar-nav>a.nav-link:hover{
+  color: #00ff00 !important;
 }
+.navbar{
+  /* background-color: black; */
+z-index: 10;
+max-width: 100% !important;
+margin: 0;
+padding: 0;
+}
+.navbar-nav{
+  align-items: center; 
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -56,7 +67,7 @@
   width: 100vw;
 }
 .navbar-nav>a{
-  color: #00ff00;
+  color: #007A00;
 }
 
 .navbar-nav>a.active.nav-link{
