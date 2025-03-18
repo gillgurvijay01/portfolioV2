@@ -1,7 +1,7 @@
 {
   "name": "portfolio-v2-frontend",
   "version": "1.0.2",
-  "homepage": "https://gillgurvijay01.github.io/portfolioV2",
+  "homepage": "https://gsgill.me",
   "private": true,
   "dependencies": {
     "@tsparticles/engine": "^3.8.1",
@@ -11,7 +11,8 @@
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-particles-js": "^3.6.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "sharp": "^0.33.5"
   },
   "scripts": {
     "predeploy": "npm run build",
