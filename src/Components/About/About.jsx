@@ -42,8 +42,7 @@ const About = () => {
   const skills = [
     "React.js", "Node.js", "JavaScript", "TypeScript", "MongoDB",
     "Express.js", "HTML5", "CSS3", "Git", "RESTful APIs",
-    "Redux", "Next.js", "Material-UI", "Bootstrap", "Jest",
-    "AWS", "Docker", "CI/CD", "Agile", "JIRA", "Python"
+    "Redux", "Material-UI", "Bootstrap", "SQL","Nginx", "Docker", "Agile", "JIRA", "Python"
   ];
 
   const honors = [
