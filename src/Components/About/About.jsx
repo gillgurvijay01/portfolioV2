@@ -49,27 +49,27 @@ const About = () => {
   const honors = [
     {
       title: "2nd in codestorm event",
-      year: "2023",
+      year: "2017",
       institution: "Delhi Public School, NTPC Vidyut Nagar"
     },
     {
       title: "1st in build a code",
-      year: "2023",
+      year: "2018",
       institution: "CGC Jhanjeri"
     },
     {
       title: "2nd position in Spring Hackathon",
-      year: "2022",
+      year: "2024",
       institution: "Concordia University-Wisconsin"
     },
     {
       title: "3rd Position in summer hackathon",
-      year: "2022",
+      year: "2024",
       institution: "Concordia University-Wisconsin"
     },
     {
       title: "2nd position in Fall Mini Hackathon - II",
-      year: "2022",
+      year: "2024",
       institution: "Concordia University-Wisconsin"
     },
     {
