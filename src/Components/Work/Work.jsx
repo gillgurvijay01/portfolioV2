@@ -1,56 +1,75 @@
-import React from "react";
-import { Fade } from "react-reveal";
+import React, { useEffect, useState } from "react";
 import css from "./work.module.css";
+
 const Work = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('work');
+    if (element) observer.observe(element);
+
+    return () => {
+      if (element) observer.unobserve(element);
+    };
+  }, []);
+
+  const workExperience = [
+    {
+      title: "Student Worker / Web Developer",
+      company: "Concordia University-Wisconsin",
+      location: "Mequon, Wisconsin, United States",
+      duration: "May 2024 - Present",
+      description: "Developed and deployed a ticket management system for the Makerspace 3D printing lab. Collaborated effectively within a dynamic team environment, working under professor guidance. Functioned as a Full Stack Developer, contributing to both front-end and back-end development using the MERN stack.",
+      technologies: ["React.js", "Express.js", "MongoDB", "Node.js", "MERN Stack", "REST APIs"]
+    },
+    {
+      title: "Software Engineer",
+      company: "Scramble Apps Pvt. Ltd.",
+      location: "Sahibzada Ajit Singh Nagar, Punjab, India",
+      duration: "September 2022 - May 2023",
+      description: "Contributed as a React Developer, designing and implementing intuitive user interfaces. Developed interactive front-end features, worked closely with clients, and participated in agile development processes. Created user flows and wireframes using Adobe XD.",
+      technologies: ["React.js", "HTML", "CSS", "JavaScript", "Adobe XD", "Agile"]
+    },
+    {
+      title: "Software Development Trainee",
+      company: "Wisdom InfoSoft",
+      location: "Sahibzada Ajit Singh Nagar, Punjab, India",
+      duration: "February 2022 - June 2022",
+      description: "Trained in MERN Full stack technology, gaining hands-on experience with MongoDB, Express, React, and Node.js. Developed and deployed full-stack web applications, worked with REST APIs, and demonstrated proficiency in SQL and NoSQL database design.",
+      technologies: ["MERN Stack", "REST APIs", "MongoDB", "Express.js", "React.js", "Node.js"]
+    }
+  ];
+
   return (
-    <div className={`${css.workDiv}`} id="work">
-      <Fade top>
-        <p className={` ${css.heading} text-center mt-3 mb-5`}>Work Expirience</p>
-      </Fade>
-      <div className={`${css.work}`}>
-        <div className={`${css.workExp} row`}>
-        <Fade left cascade>
-          <div className="col-xs-12 col-lg-4">
-            <p className={`${css.headingWork}`}>Scramble Apps Pvt. Ltd.</p>
-            <p className={`${css.posWork}`}>Software Engineer</p>
-            <p className={`${css.timeWork}`}>September 2022 - Present</p>
+    <div id="work" className={`${css.workSection} ${isVisible ? css.visible : ''}`}>
+      <h2 className={css.heading}>Work Experience</h2>
+      <div className={css.workGrid}>
+        {workExperience.map((work, index) => (
+          <div key={index} className={css.workCard}>
+            <div className={css.workHeader}>
+              <h3 className={css.title}>{work.title}</h3>
+              <span className={css.duration}>{work.duration}</span>
+            </div>
+            <h4 className={css.company}>{work.company}</h4>
+            <p className={css.location}>{work.location}</p>
+            <p className={css.description}>{work.description}</p>
+            <div className={css.technologies}>
+              {work.technologies.map((tech, techIndex) => (
+                <span key={techIndex} className={css.techTag}>{tech}</span>
+              ))}
+            </div>
           </div>
-          </Fade>
-          <div className="col-xs-12 col-lg-8 ">
-            <p className={`${css.detailsWork} mx-md-auto`}>
-            <Fade right cascade>
-          
-              <ul className={`${css.points}`}>
-                <li>Working as React Front End Developer</li>
-                <li>Worked in projects with multiple technologies.</li>
-              </ul>
-            
-              </Fade>
-            </p>
-          </div>
-        </div>
-        <div className={`${css.workExp} row`}>
-        <Fade left cascade>
-          
-          <div className="col-xs-12 col-lg-4">
-            <p className={`${css.headingWork}`}>Wisdom Infosoft Pvt. Ltd.</p>
-            <p className={`${css.posWork}`}>Software Developement Trainee</p>
-            <p className={`${css.timeWork}`}>February 2022 - June 2022</p>
-          </div>
-          </Fade>
-          <div className="col-xs-12 col-lg-8 mx-md-auto">
-            <p className={`${css.detailsWork}`}>
-            <Fade right cascade>
-          
-              <ul className={`${css.points}`}>
-                <li>Trained in MERN Full stack technology</li>
-                <li>Learned technologies like ReactJs, MongoDb database, NodeJS, and Express Js</li>
-                
-              </ul>
-              </Fade>
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

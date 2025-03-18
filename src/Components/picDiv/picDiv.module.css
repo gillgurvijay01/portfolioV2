@@ -1,68 +1,170 @@
 .picdiv {
-    background-color: black;
-    color: #007A00;
-    height: max-content;
-    font-family: 'MyFont';
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    /*options : flex-start | flex-end | center | baseline | stretch*/
-    justify-content: center;
-    /*options : start |  center | space-between | space-around | space-evenly*/
     align-items: center;
-    height: 100vh;
-    max-width: 100vw !important;
-    margin-right: 0px !important;
-    margin-left: 0px !important;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.picdiv.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.particlesContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.contentContainer {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .centered_div {
-    /* border:0.1rem dotted #00ff00; */
-
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
-    width:100vw;
-    /* border: 0.2rem solid #00ff00; */
-    /* margin: 2rem; */
-    /* width: 90vw; */
+    gap: 4rem;
+    position: relative;
+    z-index: 2;
 }
 
-/* .typewriter{
-width: ;
-text-align: center;
-} */
+.imageDiv {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    background: white;
+    z-index: 2;
+}
+
+.imageWrapper:hover {
+    transform: scale(1.05);
+}
+
 .profilepic {
-    height: 30rem;
-    width: auto;
-    padding: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
-@media only  screen and (max-width:768px) {
-    .profilepic{
-        width: 450px;
-        padding: 0;
-        margin: 0;
-    }
+
+.profilepic:hover {
+    transform: scale(1.1);
 }
+
 .topContent {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 5px;
-
+    position: relative;
+    z-index: 2;
 }
-/* 
-@media only screen and (max-width : 768px) {
 
-    .topContent {
-        margin-top: 2rem;
-        border-top: 10px solid #00ff00;
-        border-right: 10px solid #00ff00;
-        border-bottom: 10px solid #00ff00;
+.textWrapper {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
 
+.textWrapper h1 {
+    color: #1a202c;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    font-size: var(--h4-size);
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: var(--font-medium);
+    position: relative;
+    z-index: 2;
+}
+
+.description {
+    font-size: var(--body-large);
+    color: #2d3748;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 992px) {
+    .centered_div {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
     }
-} */
 
-.imageDiv {
-    padding: 3rem;
-    margin-left: 10px;
+    .textWrapper {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contentContainer {
+        padding: 4rem 1rem;
+    }
+
+    .textWrapper h1 {
+        font-size: var(--h2-size);
+    }
+
+    .subtitle {
+        font-size: var(--body-large);
+    }
+
+    .description {
+        font-size: var(--body-normal);
+    }
+
+    .imageWrapper {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .textWrapper h1 {
+        font-size: var(--h3-size);
+    }
+
+    .subtitle {
+        font-size: var(--body-normal);
+    }
+
+    .imageWrapper {
+        width: 200px;
+        height: 200px;
+    }
 }

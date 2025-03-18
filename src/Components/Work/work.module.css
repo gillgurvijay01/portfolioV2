@@ -1,58 +1,132 @@
-
-.workDiv{
-    background-color: black;
-    color: #007A00;
-    max-height: fit-content;
-    min-height: 100vh ;
-    max-width: 100vw !important;
-    padding-top: 100px;
+.workSection {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.heading{
-    font-size: 3rem;
-    font-weight:1000;
-    font-family: 'MyFont';
- }
-.work{
-    padding: 1rem 14rem;
+.workSection.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
-@media only screen  and (max-width : 1300px)  {
-    .work{
-        padding: 2rem;
+
+.heading {
+    font-family: var(--heading-font);
+    font-size: var(--h2-size);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.workGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.workCard {
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(108, 92, 231, 0.1);
+}
+
+.workCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.workHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-family: var(--heading-font);
+    font-size: var(--h4-size);
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.duration {
+    font-family: var(--mono-font);
+    font-size: var(--body-small);
+    color: var(--secondary-color);
+    background: rgba(108, 92, 231, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+}
+
+.company {
+    font-family: var(--heading-font);
+    font-size: var(--body-large);
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    font-family: var(--mono-font);
+    font-size: var(--body-small);
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-family: var(--body-font);
+    font-size: var(--body-normal);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.techTag {
+    font-family: var(--mono-font);
+    font-size: var(--body-small);
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .workSection {
+        padding: 4rem 1rem;
     }
-    
-}
-@media only screen  and (max-width : 990px){
-    .headingWork{
-        font-size: 2rem !important; 
-       }
-       .timeWork{
-           font-size: 0.8rem !important;
-       }
-       .posWork{
-           font-size: 1rem !important;
-       }
-       .points{
-           font-size: 1.2rem !important;
-           margin-top: 1rem;
-       }
-}
-.workExp{
-margin: 1rem 0;
-}
-.headingWork{
- font-size: 2rem; 
-}
-.timeWork{
-    font-size: 1rem;
-}
-.posWork{
-    font-size: 1.1rem;
-}
-.detailsWork{
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-.points > * {
-    margin-top: 10px;
+
+    .heading {
+        font-size: var(--h3-size);
+    }
+
+    .workCard {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: var(--body-large);
+    }
+
+    .company {
+        font-size: var(--body-normal);
+    }
+
+    .description {
+        font-size: var(--body-small);
+    }
 }

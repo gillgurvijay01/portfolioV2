@@ -1,11 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
 
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #2d3436;
+  --text-color: #2d3436;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Fonts */
+  --heading-font: 'Inter', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --code-font: 'Fira Code', monospace;
+  --mono-font: 'IBM Plex Mono', monospace;
+  
+  /* Font Sizes */
+  --h1-size: 3.5rem;
+  --h2-size: 2.5rem;
+  --h3-size: 2rem;
+  --h4-size: 1.5rem;
+  --body-large: 1.2rem;
+  --body-normal: 1rem;
+  --body-small: 0.9rem;
+  
+  /* Font Weights */
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-medium: 500;
+  --font-regular: 400;
+  
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0 !important;
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--body-normal);
+  font-weight: var(--font-regular);
+  line-height: var(--line-height-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
-/* 
-#root{
-  max-width: 190vw !important;
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: var(--h1-size);
+  font-weight: var(--font-bold);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-family: var(--heading-font);
+  font-size: var(--h2-size);
+  font-weight: var(--font-bold);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-family: var(--heading-font);
+  font-size: var(--h3-size);
+  font-weight: var(--font-semibold);
+  line-height: var(--line-height-normal);
+}
+
+h4 {
+  font-family: var(--heading-font);
+  font-size: var(--h4-size);
+  font-weight: var(--font-semibold);
+  line-height: var(--line-height-normal);
+}
+
+p {
+  font-family: var(--body-font);
+  line-height: var(--line-height-relaxed);
+}
+
+code {
+  font-family: var(--code-font);
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  background: rgba(108, 92, 231, 0.1);
+  border-radius: 4px;
+}
+
+.tech-tag {
+  font-family: var(--mono-font);
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+.duration, .year {
+  font-family: var(--mono-font);
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+/* #root{
+  max-width: 100% !important;
+  
 } */

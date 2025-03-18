@@ -1,0 +1,114 @@
+.educationSection {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.educationSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heading {
+  font-family: var(--heading-font);
+  font-size: var(--h2-size);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.educationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.educationCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(108, 92, 231, 0.1);
+}
+
+.educationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.educationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.degree {
+  font-family: var(--heading-font);
+  font-size: var(--h4-size);
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.duration {
+  font-family: var(--mono-font);
+  font-size: var(--body-small);
+  color: var(--secondary-color);
+  background: rgba(108, 92, 231, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+}
+
+.school {
+  font-family: var(--heading-font);
+  font-size: var(--body-large);
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-family: var(--mono-font);
+  font-size: var(--body-small);
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-family: var(--body-font);
+  font-size: var(--body-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .educationSection {
+    padding: 4rem 1rem;
+  }
+
+  .heading {
+    font-size: var(--h3-size);
+  }
+
+  .educationCard {
+    padding: 1.5rem;
+  }
+
+  .degree {
+    font-size: var(--body-large);
+  }
+
+  .school {
+    font-size: var(--body-normal);
+  }
+
+  .description {
+    font-size: var(--body-small);
+  }
+} 
