@@ -1,7 +1,7 @@
 {
   "name": "portfolio-v2-frontend",
   "version": "1.0.2",
-  "homepage": "https://gsgill.me",
+  "homepage": "https://gillgurvijay01.github.io/portfolioV2",
   "private": true,
   "dependencies": {
     "@tsparticles/engine": "^3.8.1",
