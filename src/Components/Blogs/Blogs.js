@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import './Blogs.css';
 
 const Blogs = () => {
