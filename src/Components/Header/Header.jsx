@@ -18,7 +18,8 @@ const Header = () => {
     { name: 'About', id: 'about' },
     { name: 'Work', id: 'work' },
     { name: 'Education', id: 'education' },
-    { name: 'Projects', id: 'projects' }
+    { name: 'Projects', id: 'projects' },
+    { name: 'Blogs', id: 'blogs' }
   ];
 
   const scrollToSection = (id) => {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import css from "./about.module.css";
+import Blogs from "../Blogs/Blogs";
 
 const About = () => {
   const [text, setText] = useState("");
@@ -94,6 +95,8 @@ const About = () => {
         </div>
       </div>
 
+      <Blogs />
+
       <div className={css.honorsSection}>
         <h3 className={css.skillsHeading}>Honors & Awards</h3>
         <div className={css.honorsGrid}>
@@ -136,6 +139,14 @@ const About = () => {
           className={css.link}
         >
           LinkedIn
+        </a>
+        <a
+          href="https://hashnode.com/@gillgurvijay01"
+          target="_blank"
+          rel="noreferrer"
+          className={css.link}
+        >
+          Hashnode
         </a>
       </div>
     </div>
