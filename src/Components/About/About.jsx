@@ -5,7 +5,8 @@ import Blogs from "../Blogs/Blogs";
 const About = () => {
   const [text, setText] = useState("");
   const [isVisible, setIsVisible] = useState(false);
-  const fullText = "I'm a Software Engineer pursuing my M.S. in Computer Science at Concordia University-Wisconsin. With 2+ years of full-stack development experience, I specialize in the MERN stack and modern web technologies. My programming journey began with QBASIC, evolved through web development and C++, and now focuses on creating innovative solutions using React.js, Node.js, and cloud technologies. I'm passionate about building scalable applications and staying current with emerging tech trends.";
+  const fullText = `I’m a full-stack developer with over two years of hands-on experience and a freshly completed M.S. in Computer Science (May 2025). My coding journey began in QBASIC before I dove into web development and C++, and today I build scalable, user-focused applications using the MERN stack, modern JavaScript, and cloud services. I thrive on translating complex challenges into elegant React.js front-ends and performant Node.js back-ends, and I’m passionate about staying ahead of emerging technologies, optimizing workflows, and collaborating across teams to bring ideas from concept to production.
+`;
 
   useEffect(() => {
     let currentIndex = 0;
