@@ -28,7 +28,7 @@ const Work = () => {
       title: "Student Worker / Web Developer",
       company: "Concordia University-Wisconsin",
       location: "Mequon, Wisconsin, United States",
-      duration: "May 2024 - Present",
+      duration: "May 2024 - April 2025",
       description: "Developed and deployed a ticket management system for the Makerspace 3D printing lab. Collaborated effectively within a dynamic team environment, working under professor guidance. Functioned as a Full Stack Developer, contributing to both front-end and back-end development using the MERN stack.",
       technologies: ["React.js", "Express.js", "MongoDB", "Node.js", "MERN Stack", "REST APIs"]
     },
