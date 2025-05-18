@@ -8,6 +8,7 @@ const About = lazy(() => import('./Components/About/About'));
 const Work = lazy(() => import('./Components/Work/Work'));
 const Projects = lazy(() => import('./Components/Projects/Projects'));
 const Education = lazy(() => import('./Components/Education/Education'));
+const Recommendations = lazy(() => import('./Components/Recommendations/Recommendations'));
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <PicDiv />
           <About />
           <Work />
+          <Recommendations />
           <Education />
           <Projects />
         </Suspense>

@@ -1,0 +1,236 @@
+.recommendationsSection {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%);
+  position: relative;
+}
+
+.heading {
+  font-family: var(--heading-font);
+  font-size: var(--h2-size);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--text-primary), var(--primary-color));
+  border-radius: 2px;
+}
+
+.marqueeContainer {
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+  background: transparent;
+  cursor: grab;
+}
+
+.marqueeContainer:active {
+  cursor: grabbing;
+}
+
+.marqueeContent {
+  display: flex;
+  gap: 5rem;
+  padding: 2rem 3rem;
+  transition: transform 0.3s ease-out;
+  user-select: none;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: fit-content;
+}
+
+.marqueeContent::-webkit-scrollbar {
+  display: none;
+}
+
+.recommendationCard {
+  max-width: 400px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendationCard::before {
+  content: '"';
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  font-size: 3rem;
+  color: var(--accent-color);
+  opacity: 0.15;
+  font-family: serif;
+  line-height: 1;
+}
+
+.recommendationCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
+}
+
+.recommendationHeader {
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.name {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.designation {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0.25rem 0;
+  font-weight: 500;
+  opacity: 0.9;
+  display: inline-block;
+}
+
+.organization {
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  margin: 0.25rem 0 0 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  flex: 1;
+}
+
+/* Navigation Arrows */
+.navArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.navArrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.navArrowLeft {
+  left: 1rem;
+}
+
+.navArrowRight {
+  right: 1rem;
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px - 2rem));
+  }
+}
+
+.autoScrolling {
+  animation: autoScroll 15s linear infinite;
+}
+
+.autoScrolling:hover, .autoScrolling:active {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recommendationCard {
+    min-width: 350px;
+    max-width: 350px;
+    height: 170px;
+    padding: 1.1rem;
+  }
+  
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .navArrow {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendationCard {
+    min-width: 300px;
+    max-width: 300px;
+    height: 160px;
+    padding: 1rem;
+  }
+  
+  .heading {
+    font-size: 1.4rem;
+  }
+  
+  .name {
+    font-size: 1rem;
+  }
+  
+  .note {
+    font-size: 0.8rem;
+  }
+
+  .navArrow {
+    width: 30px;
+    height: 30px;
+  }
+} 
