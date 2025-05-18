@@ -41,7 +41,7 @@ const PicDiv = () => {
                         <div className={style.textWrapper}>
                             <h1>Hi, I'm Gurvijay Singh Gill</h1>
                             <p className={style.subtitle}>Software Engineer | React, Node.js, Docker | JavaScript Developer</p>
-                            <p className={style.description}>Graduating in May 2025 with an M.S. in Computer Science from Concordia University-Wisconsin, I have over 2 years of experience in full-stack development, specializing in React.js, Node.js, Express.js, and MongoDB.</p>
+                            <p className={style.description}>Recently graduated in May 2025 with an M.S. in Computer Science from Concordia University-Wisconsin, I have over 2 years of experience in full-stack development, specializing in React.js, Node.js, Express.js, and MongoDB.</p>
                         </div>
                     </div>
                 </div>
